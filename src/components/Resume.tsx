@@ -93,10 +93,6 @@ const Resume = () => {
                 <p>Collaboration, communication, cultural awareness</p>
               </div>
               <div className="skill-category">
-                <h5>Customer Service</h5>
-                <p>Extensive POS experience, adaptability in fast-paced environments, phone etiquette</p>
-              </div>
-              <div className="skill-category">
                 <h5>Critical Thinking</h5>
                 <p>Efficient problem-solving, analytical examination, time management</p>
               </div>
