@@ -11,6 +11,14 @@ const About = () => {
         </div>
         
         <div className="about-content">
+          <div className="about-image">
+            <img 
+              src="/about-me/IMG_7375.jpeg" 
+              alt="Peyton Rubenstein" 
+              className="profile-image"
+            />
+          </div>
+          
           <div className="about-text">
             <p className="about-description">
               Hi! I'm Peyton Rubenstein, and I am spending Fall 2025 in Madrid, Spain! As a Global Studies student, my courses largely focus on global processes and institutions. From this perspective, I have cultivated an interest in environmental justice, as well as intersectional feminist and media theoretical frameworks.
@@ -21,9 +29,7 @@ const About = () => {
             <p className="about-description">
               Moreover, my academic background has heightened my cultural awareness, analytical skillset, and understanding of global issues. I look forward to nurturing my curiosity through lived experience and furthering my understanding of global issues while in Madrid.
             </p>
-        
-          </div> 
-          
+          </div>
         </div>
       </div>
     </section>

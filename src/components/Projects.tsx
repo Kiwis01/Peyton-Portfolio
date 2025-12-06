@@ -10,91 +10,91 @@ const Projects = () => {
   const photos = [
     {
       id: 1,
-      image: "./public/experiences/first.jpeg",
+      image: "/experiences/first.jpeg",
       alt: "Plaza Mayor",
       description: "Exploring the iconic Plaza Mayor in the heart of Madrid"
     },
     {
       id: 2,
-      image: "./public/experiences/second.jpeg",
+      image: "/experiences/second.jpeg",
       alt: "Retiro Park",
       description: "Relaxing in the beautiful Retiro Park during a study break"
     },
     {
       id: 3,
-      image: "./public/experiences/third.jpeg",
+      image: "/experiences/third.jpeg",
       alt: "Local Cuisine",
       description: "Discovering authentic Spanish tapas and local flavors"
     },
     {
       id: 4,
-      image: "./public/experiences/fourth.jpg",
+      image: "/experiences/fourth.jpg",
       alt: "University Life",
       description: "Campus life and academic experiences in Madrid"
     },
     {
       id: 5,
-      image: "./public/experiences/fifth.jpeg",
+      image: "/experiences/fifth.jpeg",
       alt: "Cultural Sites",
       description: "Visiting museums and cultural landmarks around the city"
     },
     {
       id: 6,
-      image: "./public/experiences/sixth.jpg",
+      image: "/experiences/sixth.jpg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 7,
-      image: "./public/experiences/seventh.jpeg",
+      image: "/experiences/seventh.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 8,
-      image: "./public/experiences/eight.jpeg",
+      image: "/experiences/eight.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 9,
-      image: "./public/experiences/ninth.jpeg",
+      image: "/experiences/ninth.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 10,
-      image: "./public/experiences/tenth.jpeg",
+      image: "/experiences/tenth.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 11,
-      image: "./public/experiences/eleventh.jpeg",
+      image: "/experiences/eleventh.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 12,
-      image: "./public/experiences/twelfth.jpeg",
+      image: "/experiences/twelfth.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 13,
-      image: "./public/experiences/13.jpeg",
+      image: "/experiences/13.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     }, 
     {
       id: 14,
-      image: "./public/experiences/14.jpeg",
+      image: "/experiences/14.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     },
     {
       id: 15,
-      image: "./public/experiences/15.jpeg",
+      image: "/experiences/15.jpeg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
     }
@@ -108,19 +108,19 @@ const Projects = () => {
     },
     {
       photos: photos.slice(3, 6),
-      caption: "University Life and Cultural Immersion"
+      caption: "Lisbon"
     },
     {
       photos: photos.slice(6, 9),
-      caption: "Adventures Around the City"
+      caption: "Art"
     },
     {
       photos: photos.slice(9, 12),
-      caption: "Local Experiences and Discoveries"
+      caption: "Valencia"
     },
     {
       photos: photos.slice(12, 15),
-      caption: "Memorable Moments in Spain"
+      caption: "Mallorca"
     }
   ]
 
