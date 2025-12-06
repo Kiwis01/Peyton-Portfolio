@@ -3,65 +3,160 @@ import './Projects.css'
 
 const Projects = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
+  const [lightboxImage, setLightboxImage] = useState('')
+  const [lightboxAlt, setLightboxAlt] = useState('')
 
   const photos = [
     {
       id: 1,
-      image: "./images/madrid-1.jpg",
+      image: "./public/experiences/first.jpeg",
       alt: "Plaza Mayor",
       description: "Exploring the iconic Plaza Mayor in the heart of Madrid"
     },
     {
       id: 2,
-      image: "./images/madrid-2.jpg",
+      image: "./public/experiences/second.jpeg",
       alt: "Retiro Park",
       description: "Relaxing in the beautiful Retiro Park during a study break"
     },
     {
       id: 3,
-      image: "./images/madrid-3.jpg",
+      image: "./public/experiences/third.jpeg",
       alt: "Local Cuisine",
       description: "Discovering authentic Spanish tapas and local flavors"
     },
     {
       id: 4,
-      image: "./images/madrid-4.jpg",
+      image: "./public/experiences/fourth.jpg",
       alt: "University Life",
       description: "Campus life and academic experiences in Madrid"
     },
     {
       id: 5,
-      image: "./images/madrid-5.jpg",
+      image: "./public/experiences/fifth.jpeg",
       alt: "Cultural Sites",
       description: "Visiting museums and cultural landmarks around the city"
     },
     {
       id: 6,
-      image: "./images/madrid-6.jpg",
+      image: "./public/experiences/sixth.jpg",
       alt: "City Views",
       description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 7,
+      image: "./public/experiences/seventh.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 8,
+      image: "./public/experiences/eight.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 9,
+      image: "./public/experiences/ninth.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 10,
+      image: "./public/experiences/tenth.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 11,
+      image: "./public/experiences/eleventh.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 12,
+      image: "./public/experiences/twelfth.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 13,
+      image: "./public/experiences/13.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    }, 
+    {
+      id: 14,
+      image: "./public/experiences/14.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    },
+    {
+      id: 15,
+      image: "./public/experiences/15.jpeg",
+      alt: "City Views",
+      description: "Stunning views of Madrid's architecture and skyline"
+    }
+  ]
+
+  // Group photos into slides of 3 with captions
+  const slideData = [
+    {
+      photos: photos.slice(0, 3),
+      caption: "Exploring Madrid's Historic Heart"
+    },
+    {
+      photos: photos.slice(3, 6),
+      caption: "University Life and Cultural Immersion"
+    },
+    {
+      photos: photos.slice(6, 9),
+      caption: "Adventures Around the City"
+    },
+    {
+      photos: photos.slice(9, 12),
+      caption: "Local Experiences and Discoveries"
+    },
+    {
+      photos: photos.slice(12, 15),
+      caption: "Memorable Moments in Spain"
     }
   ]
 
   // Auto-advance carousel every 8 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % photos.length)
+      setCurrentSlide((prev) => (prev + 1) % slideData.length)
     }, 8000)
 
     return () => clearInterval(interval)
-  }, [photos.length])
+  }, [slideData.length])
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % photos.length)
+    setCurrentSlide((prev) => (prev + 1) % slideData.length)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + photos.length) % photos.length)
+    setCurrentSlide((prev) => (prev - 1 + slideData.length) % slideData.length)
   }
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index)
+  }
+
+  const openLightbox = (imageSrc: string, imageAlt: string) => {
+    setLightboxImage(imageSrc)
+    setLightboxAlt(imageAlt)
+    setLightboxOpen(true)
+    document.body.style.overflow = 'hidden' // Prevent scrolling
+  }
+
+  const closeLightbox = () => {
+    setLightboxOpen(false)
+    setLightboxImage('')
+    setLightboxAlt('')
+    document.body.style.overflow = 'unset' // Restore scrolling
   }
 
   return (
@@ -74,14 +169,28 @@ const Projects = () => {
         <div className="carousel-container">
           <div className="carousel">
             <div className="carousel-track" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
-              {photos.map((photo) => (
-                <div key={photo.id} className="carousel-slide">
-                  <div className="slide-image">
-                    <img src={photo.image} alt={photo.alt} />
+              {slideData.map((slideItem, slideIndex) => (
+                <div key={slideIndex} className="carousel-slide">
+                  <div className="slide-caption">
+                    <h3 className="caption-title">{slideItem.caption}</h3>
                   </div>
-                  <div className="slide-content">
-                    <h3 className="slide-title">{photo.alt}</h3>
-                    <p className="slide-description">{photo.description}</p>
+                  <div className="slide-images-grid">
+                    {slideItem.photos.map((photo) => (
+                      <div key={photo.id} className="slide-image-item">
+                        <div 
+                          className="slide-image"
+                          onClick={() => openLightbox(photo.image, photo.alt)}
+                        >
+                          <img src={photo.image} alt={photo.alt} />
+                          <div className="image-overlay">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                              <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
@@ -102,7 +211,7 @@ const Projects = () => {
           
           {/* Dots Indicator */}
           <div className="carousel-dots">
-            {photos.map((_, index) => (
+            {slideData.map((_, index) => (
               <button
                 key={index}
                 className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
@@ -112,6 +221,21 @@ const Projects = () => {
           </div>
         </div>
       </div>
+
+      {/* Lightbox Overlay */}
+      {lightboxOpen && (
+        <div className="lightbox-overlay" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={closeLightbox}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+            <img src={lightboxImage} alt={lightboxAlt} className="lightbox-image" />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

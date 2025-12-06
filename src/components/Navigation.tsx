@@ -53,6 +53,11 @@ const Navigation = () => {
             </button>
           </li>
           <li className="nav-item">
+            <button onClick={() => scrollToSection('essay')} className="nav-link">
+              Essay
+            </button>
+          </li>
+          <li className="nav-item">
             <button onClick={() => scrollToSection('blog')} className="nav-link">
               Blog Reports
             </button>
