@@ -23,7 +23,7 @@ const BlogReports = () => {
       id: 2,
       title: "Learning to Navigate the City",
       date: "September 2023",
-      tags: ["Daily Life", "Metro", "Cultural Adaptation"],
+      tags: ["Daily Life", "Commuting", "Cultural Adaptation"],
       excerpt: "My first few weeks in Madrid were largely spent observing and learning. I observed how Madrileños navigate the city, and how the local routines differ from my own.",
       content: `
         <p>My first few weeks in Madrid were largely spent observing and learning. I observed how Madrileños navigate the city, and how the local routines differ from my own. I found the biggest differences to be based on these routines, in the daily scheduling of transportation, rest, and meals. Everyone takes the metro in Madrid, and most small shops close for siesta each day from 2:00 to 5:00 pm. Mealtimes, I knew, were typically later than in the States, but genuinely no Madrileno even thinks about dinner until 9:00 pm. Traveling by metro and on foot, I realize all that is missed while commuting in a car. When walking through a city, everyone is out in the open, exposed; it fosters a personal connection to a place and the people in it. You're forced to move at a slower pace, to take in the world around you instead of dismissing it on the way to the next. I've liked feeling more connected to the world around me, if only on a somewhat superficial level.</p>
@@ -35,7 +35,7 @@ const BlogReports = () => {
       id: 3,
       title: "A Weekend in Lisbon",
       date: "August 2023",
-      tags: ["Travel", "Portugal", "Alfama", "Food"],
+      tags: ["Travel", "Portugal", "Regional Cuisine"],
       excerpt: "Lisbon was one of my must-see destinations while studying abroad. I soon realized that I wasn't the only one in my program who wanted to visit, so I grabbed three new friends and booked a flight for the end of August.",
       content: `
         <p>Lisbon was one of my must-see destinations while studying abroad. I soon realized that I wasn't the only one in my program who wanted to visit, so I grabbed three new friends and booked a flight for the end of August. We planned to stay in Alfama, one of the oldest neighborhoods in Lisbon, as it was one of the only to survive a major earthquake in 1755 relatively unscathed. In line with its close geographical proximity to Madrid, Lisbon has a similar history of conquerors and kings. The city has been ruled by various groups over the centuries, including the Phoenicians, Romans, Germanic tribes, and the Moors, after which Portugal's first king conquered the city. Beyond these regime changes, diverse cultural influences have permeated Lisbon through historical trade routes and interactions with other Mediterranean hubs. I could sense the ancient nature of the city, apparent in the cobblestone streets and massive, intricate infrastructures. Portugal quickly became a country I knew I'd want to explore further, not only because of its history but because of the people who live there today. Locals are extremely friendly, and even strangers whom we initially viewed with some suspicion were ultimately well-intentioned.</p>
@@ -47,7 +47,7 @@ const BlogReports = () => {
       id: 4,
       title: "The Museums",
       date: "September 2023",
-      tags: ["Art", "Museums", "Prado", "Cultural Heritage"],
+      tags: ["Art", "Museums", "Cultural Heritage"],
       excerpt: "In all honesty, one of the aspects of European culture I was most excited to indulge in was the prevalence and prestige of various museums. Though it may sound pretentious, the value of fine art is more widely appreciated in Spain than in the US.",
       content: `
         <p>In all honesty, one of the aspects of European culture I was most excited to indulge in was the prevalence and prestige of various museums. Though it may sound pretentious, the value of fine art is more widely appreciated in Spain than in the US. It's not that Europeans have a greater sense of what art is, but centuries of tradition have worked to integrate it into the public sphere. Members of high society have long commissioned artworks for their personal domains, and the first museums in Madrid were established by royalty. The city now holds claim to a Golden Triangle of Art, also known as the Big Three: the Reina Sofia, the Thyssen-Bornemisza, and, of course, the Prado. My favorite of these is the Thyssen, a museum that holds one of the most extensive collections of 20th-century art in the city. Each Saturday, entrance to the museum is free after 9:00 pm, which I recently took advantage of to check out a temporary exhibition titled Terraphilia. When I arrived at 8:45, there was a line nearly around the block, imitating a nightclub entrance more than a museum. Although it was crowded, the exhibit was worth the wait. I took home two postcards from the gift shop featuring paintings I'd wanted to see for years and unexpectedly came in contact with that night.</p>
@@ -59,7 +59,7 @@ const BlogReports = () => {
       id: 5,
       title: "Family Visit",
       date: "October 2023",
-      tags: ["Family", "Personal Growth", "Perspective"],
+      tags: ["Tour Guide", "Personal Growth", "Perspective"],
       excerpt: "The second weekend of October, my family came to visit me in Madrid. For as long as I can remember, my mom has encouraged me to study abroad; she spent a month in France as a college student and has always described it as a life-changing experience.",
       content: `
         <p>The second weekend of October, my family came to visit me in Madrid. For as long as I can remember, my mom has encouraged me to study abroad; she spent a month in France as a college student and has always described it as a life-changing experience. She hadn't been to Europe since her early twenties, and my stepdad had never left the continent. The night before they arrived, I had some anxieties about the visit. I was supposed to be the Madrilena tour guide, showing them all I had seen and learned, but I suddenly began doubting whether I'd grown at all. Once my parents were in town, I realized how much I had already changed.</p>
@@ -73,7 +73,7 @@ const BlogReports = () => {
       id: 6,
       title: "Reading the Media of a City",
       date: "November 2023",
-      tags: ["Academic", "Media Studies", "Chueca", "Lavapies"],
+      tags: ["Media Studies", "Chueca", "Lavapies"],
       excerpt: "Though the coursework itself is rarely anyone's favorite part of studying abroad, my Media, Gender, and Identity class was one I genuinely looked forward to each day. The professor, Coco Guzman, was a great instructor and led me to rethink the way I interpreted various environments, namely, urban environments.",
       content: `
         <p>Though the coursework itself is rarely anyone's favorite part of studying abroad, my Media, Gender, and Identity class was one I genuinely looked forward to each day. The professor, Coco Guzman, was a great instructor and led me to rethink the way I interpreted various environments, namely, urban environments. Media does not only consist of anything on a screen or in a book; it can be found everywhere. Through critically engaging with media, we can learn to read entire cities, gaining a better understanding of the citizens, their identities, and the issues that they face. Reading a city uncovers hidden forms of resistance and reveals historic legacies that persist into the present. My favorite assignments for this class were the walking trips we took around different neighborhoods in Madrid.</p>
@@ -98,7 +98,7 @@ const BlogReports = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Blog Reports</h2>
-          <p className="section-subtitle">Weekly reflections on my study abroad journey in Madrid</p>
+          <p className="section-subtitle"> Posts from my time abroad</p>
         </div>
         
         <div className="blog-grid">
@@ -106,7 +106,7 @@ const BlogReports = () => {
             <div key={post.id} className="blog-card">
               <div className="blog-header">
                 <h3 className="blog-title">{post.title}</h3>
-                <span className="blog-date">{post.date}</span>
+                {/* <span className="blog-date">{post.date}</span> */}
               </div>
               
               <div className="blog-tags">

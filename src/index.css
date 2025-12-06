@@ -5,29 +5,31 @@
 }
 
 :root {
-  /* Sunny Beach Day Color Palette */
-  --charcoal-blue: #264653;
-  --verdigris: #2A9D8F;
-  --jasmine: #E9C46A;
-  --sandy-brown: #F4A261;
-  --burnt-peach: #E76F51;
+  /* Warm Neutrals Color Palette */
+  --light-bronze: #CB997E;
+  --powder-petal: #EDDCD2;
+  --linen: #FFF1E6;
+  --parchment: #F0EFEB;
+  --desert-sand: #DDBEA9;
+  --dry-sage: #A5A58D;
+  --ash-grey: #B7B7A4;
   
   /* Semantic color assignments */
-  --primary-color: var(--verdigris);
-  --secondary-color: var(--jasmine);
-  --accent-color: var(--burnt-peach);
-  --warm-accent: var(--sandy-brown);
-  --text-dark: var(--charcoal-blue);
+  --primary-color: var(--light-bronze);
+  --secondary-color: var(--dry-sage);
+  --accent-color: var(--desert-sand);
+  --warm-accent: var(--powder-petal);
+  --text-dark: #3D3D2F;
   --text-light: #ffffff;
-  --background-light: #ffffff;
-  --background-warm: #fefcf8;
+  --background-light: var(--linen);
+  --background-warm: var(--parchment);
   
-  /* Fun background tints */
-  --bg-verdigris-light: #f0faf9;
-  --bg-jasmine-light: #fef9e7;
-  --bg-sandy-light: #fef7f0;
-  --bg-peach-light: #fef2f0;
-  --bg-charcoal-light: #f8f9fa;
+  /* Light background tints using the lighter neutral colors */
+  --bg-verdigris-light: var(--linen);
+  --bg-jasmine-light: var(--powder-petal);
+  --bg-sandy-light: var(--desert-sand);
+  --bg-peach-light: var(--parchment);
+  --bg-charcoal-light: var(--linen);
   
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -103,5 +105,5 @@ input, textarea, button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, var(--verdigris) 0%, var(--sandy-brown) 100%);
+  background: linear-gradient(135deg, var(--light-bronze) 0%, var(--dry-sage) 100%);
 }

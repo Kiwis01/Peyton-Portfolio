@@ -7,7 +7,6 @@ const About = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">About Me</h2>
-          <p className="section-subtitle">My journey through global studies and cultural exploration</p>
         </div>
         
         <div className="about-content">

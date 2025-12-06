@@ -7,7 +7,7 @@ const Contact = () => {
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Get In Touch</h2>
-          <p className="section-subtitle">Let's connect and share our global perspectives</p>
+          <p className="section-subtitle">Let's connect and share our global perspectives! ☺</p>
         </div>
         
         <div className="contact-content">

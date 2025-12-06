@@ -163,7 +163,7 @@ const Projects = () => {
     <section id="projects" className="projects">
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">Study Abroad Experiences</h2>
+          <h2 className="section-title">Photo Album</h2>
         </div>
         
         <div className="carousel-container">

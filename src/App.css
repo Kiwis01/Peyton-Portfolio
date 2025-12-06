@@ -50,7 +50,7 @@
 .btn-primary:hover {
   background: var(--accent-color);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(42, 157, 143, 0.3);
+  box-shadow: 0 10px 25px rgba(203, 153, 126, 0.3);
 }
 
 .btn-secondary {

@@ -18,7 +18,7 @@ const Hero = () => {
           <h1 className="hero-title">
             <span className="highlight">Semester in Spain</span>
           </h1>
-          <p className="hero-subtitle">A Global Studies Major's Study Abroad Experience </p>
+          <p className="hero-subtitle">A Global Studies Major's Experience Abroad</p>
         </div>
       </div>
       
